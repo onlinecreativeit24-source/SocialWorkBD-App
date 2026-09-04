@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SocialWorkBD - কাজের মার্কেটপ্লেস</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1>SocialWorkBD</h1>
+    <p>কাজ করুন, দক্ষতা দিয়ে আয় করুন</p>
+
+    <nav>
+      <a href="index.html">হোম</a>
+      <a href="signup.html">সাইনআপ</a>
+      <a href="login.html">লগইন</a>
+      <a href="dashboard.html">ড্যাশবোর্ড</a>
+      <a href="profile.html">প্রোফাইল</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h2>আপনার দক্ষতা দিয়ে কাজ করুন</h2>
+    <p>
+      Client কাজ পোস্ট করবে এবং Worker কাজ খুঁজে নিয়ে
+      বিড করে কাজ সম্পন্ন করতে পারবে।
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn" href="signup.html">অ্যাকাউন্ট তৈরি করুন</a>
+      <a class="btn secondary" href="login.html">লগইন করুন</a>
+    </div>
+  </section>
+
+  <section class="jobs-section">
+
+    <div class="section-heading">
+      <div>
+        <h2>সাম্প্রতিক কাজ</h2>
+        <p>নতুন পোস্ট করা কাজগুলো দেখুন</p>
+      </div>
+
+      <a class="btn" href="post-job.html">+ কাজ পোস্ট করুন</a>
+    </div>
+
+    <div class="search-box">
+      <input
+        type="search"
+        id="job-search"
+        placeholder="কাজ বা স্কিল দিয়ে সার্চ করুন..."
+        autocomplete="off"
+      >
+    </div>
+
+    <ul id="job-list"></ul>
+
+    <div id="no-jobs" class="empty-state" hidden>
+      <h3>এখনও কোনো কাজ পোস্ট করা হয়নি</h3>
+      <p>Client প্রথম কাজটি পোস্ট করতে পারেন।</p>
+      <a class="btn" href="post-job.html">কাজ পোস্ট করুন</a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2026 SocialWorkBD</p>
+    <p>বাংলাদেশি Freelance & Job Marketplace</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
