@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ড্যাশবোর্ড - SocialWorkBD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+
+    <h1>SocialWorkBD</h1>
+    <p>আপনার কাজের ড্যাশবোর্ড</p>
+
+    <nav>
+      <a href="index.html">হোম</a>
+      <a href="profile.html">প্রোফাইল</a>
+      <a href="post-job.html">কাজ পোস্ট</a>
+      <a href="#" id="logout-btn">লগআউট</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Account Summary -->
+  <section class="hero">
+
+    <h2>আমার ড্যাশবোর্ড</h2>
+
+    <p>
+      আপনার পোস্ট করা কাজ, বিড এবং কাজের অগ্রগতি এখানে দেখতে পারবেন।
+    </p>
+
+  </section>
+
+  <!-- Client Jobs -->
+  <section class="jobs-section">
+
+    <div class="section-heading">
+
+      <div>
+        <h2>আমার পোস্ট করা কাজ</h2>
+        <p>আপনার তৈরি করা কাজগুলো</p>
+      </div>
+
+      <a class="btn" href="post-job.html">
+        + নতুন কাজ পোস্ট
+      </a>
+
+    </div>
+
+    <ul id="jobs-list"></ul>
+
+  </section>
+
+  <!-- Worker Bids -->
+  <section class="jobs-section">
+
+    <div class="section-heading">
+
+      <div>
+        <h2>আমার বিড</h2>
+        <p>আপনি যেসব কাজে আবেদন করেছেন</p>
+      </div>
+
+    </div>
+
+    <ul id="bids-list"></ul>
+
+  </section>
+
+  <!-- Earnings Information -->
+  <section class="jobs-section">
+
+    <h2>Worker Earnings</h2>
+
+    <p>
+      কাজ সম্পন্ন ও Client কর্তৃক অনুমোদিত হলে আপনার
+      earnings এখানে দেখানো হবে।
+    </p>
+
+    <div class="empty-state">
+
+      <h3>বর্তমান Earnings</h3>
+
+      <p>
+        ৳ <strong id="worker-balance">0</strong>
+      </p>
+
+      <small>
+        Payment system যুক্ত করার পর এখানে
+        বাস্তব earnings দেখানো হবে।
+      </small>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="container">
+
+    <p>© 2026 SocialWorkBD</p>
+
+    <p>
+      বাংলাদেশি Freelance & Job Marketplace
+    </p>
+
+  </div>
+
+</footer>
+
+<script src="app.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const user = JSON.parse(
+      localStorage.getItem("currentUser") || "null"
+    );
+
+    const balance =
+      document.getElementById("worker-balance");
+
+    if (user && balance) {
+      balance.textContent =
+        Number(user.balance || 0).toLocaleString("bn-BD");
+    }
+
+  });
+</script>
+
+</body>
+</html>
