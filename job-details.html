@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>কাজের বিস্তারিত - SocialWorkBD</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container">
+
+    <h1>SocialWorkBD</h1>
+    <p>কাজের বিস্তারিত</p>
+
+    <nav>
+      <a href="index.html">হোম</a>
+      <a href="dashboard.html">ড্যাশবোর্ড</a>
+      <a href="profile.html">প্রোফাইল</a>
+      <a href="login.html">লগইন</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Job Details -->
+  <section class="jobs-section">
+
+    <h2 id="job-title">কাজ লোড হচ্ছে...</h2>
+
+    <p id="job-desc">
+      কাজের বিস্তারিত লোড হচ্ছে...
+    </p>
+
+    <p>
+      <strong>বাজেট:</strong>
+      <span id="job-budget">-</span> BDT
+    </p>
+
+    <p>
+      <strong>প্রয়োজনীয় স্কিল:</strong>
+      <span id="job-skills">-</span>
+    </p>
+
+  </section>
+
+  <!-- Bid Section -->
+  <section id="bid-section" class="jobs-section">
+
+    <h2>এই কাজে বিড করুন</h2>
+
+    <p>
+      আপনি কাজটি করতে কত টাকা এবং কত দিনে পারবেন
+      তা নিচে জানান।
+    </p>
+
+    <form id="bid-form">
+
+      <label for="cover">
+        কভার লেটার
+      </label>
+
+      <textarea
+        id="cover"
+        rows="6"
+        placeholder="আপনি কেন এই কাজের জন্য উপযুক্ত তা লিখুন..."
+        required
+      ></textarea>
+
+      <label for="bid-amount">
+        আপনার অফার (BDT)
+      </label>
+
+      <input
+        type="number"
+        id="bid-amount"
+        min="1"
+        step="1"
+        placeholder="যেমন: 3000"
+        required
+      >
+
+      <label for="delivery-days">
+        কাজ শেষ করার সময় (দিন)
+      </label>
+
+      <input
+        type="number"
+        id="delivery-days"
+        min="1"
+        step="1"
+        placeholder="যেমন: 5"
+        required
+      >
+
+      <button type="submit">
+        বিড জমা দিন
+      </button>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="container">
+
+    <p>© 2026 SocialWorkBD</p>
+
+    <p>
+      বাংলাদেশি Freelance & Job Marketplace
+    </p>
+
+  </div>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
